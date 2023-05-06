@@ -1,0 +1,34 @@
+
+{
+
+"Version": "2012-10-17",
+
+"Statement": { "Effect": "Allow",
+"Action": "s3:ListBucket",
+ 
+
+"Resource": "arn:aws:s3:::mys3_bucket"
+
+}
+
+}
+
+5. Securing buckets
+
+{
+
+"Version": "2012-10-17",
+
+"Statement": [{
+
+"Sid": "1",
+
+"Effect": "Allow",
+
+"Principal": {"AWS": ["arn:aws:iam::account-id:root"]}, "Action": "s3:*",
+"Resource": [ "arn:aws:s3:::mybucket", "arn:aws:s3:::mybucket/*"
+]
+
+}]
+
+}
